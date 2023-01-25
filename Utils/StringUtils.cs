@@ -4,19 +4,17 @@ namespace MyUtilities
     {
         public static string ascii(string s)
         {
-            string s = Console.ReadLine();
             foreach (char c in s)
             {
                 System.Convert.ToInt32(c);
                 int unicode = c;
                 char character = (char)unicode;
                 string text = character.ToString();
-                Console.Write(text);
+                return text;
             }
         }
         public static string ToUpper(string s)
         {
-            string s = Console.ReadLine();
             foreach (char c in s)
             {
                 System.Convert.ToInt32(c);
@@ -25,20 +23,19 @@ namespace MyUtilities
                     int unicode = c - 32;
                     char character = (char)unicode;
                     string text = character.ToString();
-                    Console.WriteLine(text);
+                    return text;
                 }
                 else
                 {
                     int unicode = c;
                     char character = (char)unicode;
                     string text = character.ToString();
-                    Console.WriteLine(text);
+                    return text;
                 }
             }
         }
         public static string ToLower(string s)
         {
-            string s = Console.ReadLine();
             foreach (char c in s)
             {
                 System.Convert.ToInt32(c);
@@ -47,14 +44,14 @@ namespace MyUtilities
                     int unicode = c + 32;
                     char character = (char)unicode;
                     string text = character.ToString();
-                    Console.Write(text);
+                    return text;
                 }
                 else
                 {
                     int unicode = c;
                     char character = (char)unicode;
                     string text = character.ToString();
-                    Console.Write(text);
+                    return text;
                 }
             }
         }
