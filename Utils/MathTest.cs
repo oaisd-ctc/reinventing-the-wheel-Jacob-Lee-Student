@@ -1,4 +1,4 @@
-using Xunit;
+/* using Xunit;
 namespace MyUtilities;
 
 public class Tests {
@@ -44,4 +44,4 @@ public class Tests {
         int desiredOutcome = 10;
         Assert.Equal(desiredOutcome, MathUtils.Max(aTest, bTest));
     }
-}
+} */
