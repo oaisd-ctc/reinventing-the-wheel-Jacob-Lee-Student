@@ -7,20 +7,18 @@ namespace MyUtilities
             string text = ("");
             foreach (char c in s)
             {
-                System.Convert.ToInt32(c);
+                int i = (int)(c);
                 if (c >= 97 && c <= 122)
                 {
                     int unicode = c - 32;
                     char character = (char)unicode;
-                    string ASCII = character.ToString();
-                    text = text + ASCII;
+                    text = text + character;
                 }
                 else
                 {
                     int unicode = c;
                     char character = (char)unicode;
-                    string ASCII = character.ToString();
-                    text = text + ASCII;
+                    text = text + character;
                 }
             }
             return text;
@@ -30,20 +28,18 @@ namespace MyUtilities
             string text = ("");
             foreach (char c in s)
             {
-                System.Convert.ToInt32(c);
+                int i = (int)(c);
                 if (c >= 65 && c <= 90)
                 {
                     int unicode = c + 32;
                     char character = (char)unicode;
-                    string ASCII = character.ToString();
-                    text = text + ASCII;
+                    text = text + character;
                 }
                 else
                 {
                     int unicode = c;
                     char character = (char)unicode;
-                    string ASCII = character.ToString();
-                    text = text + ASCII;
+                    text = text + character;
                 }
             }
             return text;
@@ -59,18 +55,20 @@ namespace MyUtilities
         }
         public static string Reverse(string s, int length_result)
         {
-            for (int i= 0; i>=length_result; i--)
+            string reversestring=("");
+            while (length_result >= 0)
             {
-
+                reversestring = reversestring + s[length_result];
+                length_result--;
             }
-            return s;
+            return reversestring;
         }
         public static int CountVowels(string upresult)
         {
             int i = 0;
             foreach (char c in upresult)
             {
-                System.Convert.ToInt32(c);
+                int a = (int)(c);
                 if (c == 65 || c == 69 || c == 73 || c == 79 || c == 85)
                 {
                     i = i + 1;
@@ -83,7 +81,7 @@ namespace MyUtilities
             int i = 0;
             foreach (char c in upresult)
             {
-                System.Convert.ToInt32(c);
+                int a = (int)(c);
                 if (c != 65 || c != 69 || c != 73 || c != 79 || c != 85)
                 {
                     i = i + 1;
@@ -91,10 +89,28 @@ namespace MyUtilities
             }
             return i;
         }
-        public static bool HasLetter(string s)
+        /* public static bool HasLetter(string up_result, string a)
         {
-            bool answer = true;
+            int d = 0;
+            int e = 0;
+            bool answer = false;
+            foreach (char b in a)
+            {
+                e = (int)(b);
+                if (e >= 91)
+                {
+                    e = e - 32;
+                }
+            }
+            foreach (char c in up_result)
+            {
+                d = (int)(c);
+                if (d == e)
+                {
+                    answer = true;
+                }
+            }
             return answer;
-        }
+        } */
     }
 }
