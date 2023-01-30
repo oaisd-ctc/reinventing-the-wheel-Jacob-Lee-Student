@@ -55,14 +55,17 @@ namespace MyUtilities
         }
         public static string Reverse(string s, int length_result)
         {
-            string reversestring=("");
-            while (length_result >= 0)
-            {
-                reversestring = reversestring + s[length_result];
-                length_result--;
-            }
-            return reversestring;
+        // Reverse using While loop  
+        string reverse_string = "";
+        int length= length_result - 1;
+
+        while (length >= 0)
+        {
+            reverse_string = reverse_string + s[length];
+            length--;
         }
+        return reverse_string;
+    }
         public static int CountVowels(string upresult)
         {
             int i = 0;
@@ -89,7 +92,7 @@ namespace MyUtilities
             }
             return i;
         }
-        /* public static bool HasLetter(string up_result, string a)
+        public static bool HasLetter(string up_result, string a)
         {
             int d = 0;
             int e = 0;
@@ -111,6 +114,6 @@ namespace MyUtilities
                 }
             }
             return answer;
-        } */
+        }
     }
 }
