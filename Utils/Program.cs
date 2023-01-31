@@ -5,13 +5,17 @@ public class program
     {
         string s = Console.ReadLine();
         string a = Console.ReadLine();
-        string up_result = StringUtils.ToUpper(s);
-        string low_result = StringUtils.ToLower(s);
+        string to_up_result = StringUtils.ToUpper(s);
+        string to_low_result = StringUtils.ToLower(s);
         int length_result = StringUtils.Length(s);
-        string reverse_result = StringUtils.Reverse(s, length_result);
-        int vowel_result = StringUtils.CountVowels(up_result);
-        int consonants_result = StringUtils.CountConsonants(up_result);
-        bool letters_result = StringUtils.HasLetter(up_result, a);
-        Console.WriteLine(reverse_result);
+        string reverse_result = StringUtils.Reverse(s);
+        int vowel_result = StringUtils.CountVowels(s);
+        int consonants_result = StringUtils.CountConsonants(s);
+        bool letter_result = StringUtils.HasLetter(s, a);
+        bool last_letter_result = StringUtils.LastLetterIs(s, a);
+        int count_low_result = StringUtils.CountLower(s);
+        int count_up_result = StringUtils.CountUpper(s);
+        bool is_up_result = StringUtils.IsAllUpper(s);
+        Console.WriteLine(is_up_result);
     }
 }
