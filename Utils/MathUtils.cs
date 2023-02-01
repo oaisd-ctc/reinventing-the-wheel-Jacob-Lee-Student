@@ -319,12 +319,12 @@ namespace MyUtilities {
             return x;
         }
         /// <summary>
-        /// Finds the remainder of a/2
+        /// Finds the remainder of a/b
         /// </summary>
         /// <param name="a"> The dividend
         /// <param name="b"> The divisor
         /// <returns>
-        /// The remainder of a/2
+        /// The remainder of a/b
         /// </returns>
         public static int Mod(int a, int b) {
             int x = a % b;
