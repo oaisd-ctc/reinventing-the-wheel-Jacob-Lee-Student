@@ -4,12 +4,14 @@
 //     {
 //         public static string ascii(string s)
 //         {
+//             string s = Console.ReadLine();
 //             foreach (char c in s)
 //             {
 //                 System.Convert.ToInt32(c);
 //                 int unicode = c;
 //                 char character = (char)unicode;
 //                 string text = character.ToString();
+//                 Console.Write(text);
 //                 return text;
 //             }
 //         }
