@@ -1,4 +1,4 @@
-// //namespace MyUtilities
+// namespace MyUtilities
 // {
 //     public static class StringUtils
 //     {
@@ -12,6 +12,7 @@
 //                 char character = (char)unicode;
 //                 string text = character.ToString();
 //                 Console.Write(text);
+//                 return text;
 //             }
 //         }
 //         public static string ToUpper(string s)
