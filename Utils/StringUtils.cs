@@ -7,11 +7,12 @@ namespace MyUtilities
             string text = ("");
             foreach (char c in s)
             {
-                int i = (int)(c);
                 //make it numbers
+                int i = (int)(c);
+                //check if the ASCII would be lower or upper case and makes sure its actualy a letter
                 if (c >= 97 && c <= 122)
                 {
-                    //makes it uppercase
+                    //it is lowercase so removeing 32 makes it uppercase
                     int unicode = c - 32;
                     //make it text
                     char character = (char)unicode;
@@ -33,11 +34,14 @@ namespace MyUtilities
             string text = ("");
             foreach (char c in s)
             {
+                //make it numbers
                 int i = (int)(c);
+                //check if the ASCII would be lower or upper case and makes sure its actualy a letter
                 if (c >= 65 && c <= 90)
                 {
-                    //makes it lower case
+                    //it is uppercase so adding 32 makes it lowercase
                     int unicode = c + 32;
+                    //make it text
                     char character = (char)unicode;
                     text = text + character;
                 }
@@ -54,7 +58,7 @@ namespace MyUtilities
         }
         public static int Length(string s)
         {
-            //idk it just counts
+            //idk what to say it just counts the letters
             int i = 0;
             foreach (char c in s)
             {
@@ -64,19 +68,20 @@ namespace MyUtilities
         }
         public static string Reverse(string s)
         {
-            string reverse_string = "";
+            //I don't understand how I did this but it works
+            string reversed = "";
             int length = StringUtils.Length(s) - 1;
 
             while (length >= 0)
             {
-                reverse_string = reverse_string + s[length];
+                reversed = reversed + s[length];
                 length--;
             }
-            return reverse_string;
+            return reversed;
         }
         public static int CountVowels(string s)
         {
-            //uses upppercase so I don't have to use 10 numbers
+            //uses upppercase so I don't have to check 10 numbers
             s=StringUtils.ToUpper(s);
             int i = 0;
             foreach (char c in s)
@@ -94,7 +99,7 @@ namespace MyUtilities
         }
         public static int CountConsonants(string s)
         {
-            //uses upppercase so I don't have to use 10 numbers
+            //uses upppercase so I don't have to check 10 numbers
             s=StringUtils.ToUpper(s);
             int i=StringUtils.Length(s);
             foreach (char c in s)
@@ -122,8 +127,9 @@ namespace MyUtilities
             {
                 //make it numbers
                 e = (int)(b);
-                if (e > 90)
+                if (e >= 97 && e <= 122)
                 {
+                    //make it uppercase
                     e = e - 32;
                 }
             }
@@ -151,7 +157,7 @@ namespace MyUtilities
             {
                 //make it numbers
                 e = (int)(b);
-                if (e > 90)
+                if (e >= 97 && e <= 122)
                 {
                     e = e - 32;
                 }
