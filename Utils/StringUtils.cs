@@ -77,7 +77,7 @@ namespace MyUtilities
         public static int CountVowels(string s)
         {
             //uses upppercase so I don't have to use 10 numbers
-            StringUtils.ToUpper(s);
+            s=StringUtils.ToUpper(s);
             int i = 0;
             foreach (char c in s)
             {
@@ -95,17 +95,17 @@ namespace MyUtilities
         public static int CountConsonants(string s)
         {
             //uses upppercase so I don't have to use 10 numbers
-            StringUtils.ToUpper(s);
-            int i = 0;
+            s=StringUtils.ToUpper(s);
+            int i=StringUtils.Length(s);
             foreach (char c in s)
             {
                 //upper case comes in letters so I change it back into numbers
                 int a = (int)(c);
                 //A=65 E=69 I=73 O=79 U=85
-                if (c != 65 || c != 69 || c != 73 || c != 79 || c != 85)
+                if (c == 65 || c == 69 || c == 73 || c == 79 || c == 85)
                 {
-                    //counts anything thats not AEIOU
-                    i = i + 1;
+                    //subtracts anything that is AEIOU
+                    i = i - 1;
                 }
             }
             return i;
@@ -114,7 +114,7 @@ namespace MyUtilities
         {
             int d = 0;
             int e = 0;
-            StringUtils.ToUpper(s);
+            s=StringUtils.ToUpper(s);
             //set it to false because it might not have the letter
             bool answer = false;
             //This is always the number we compare. There is no reason to change it and I cant directly change string to int but I can with char. I could probably do this simpler but idk how
@@ -143,7 +143,7 @@ namespace MyUtilities
         {
             int d = 0;
             int e = 0;
-            StringUtils.ToUpper(s);
+            s=StringUtils.ToUpper(s);
             //set it to false because it might not have the letter
             bool answer = false;
             //This is always the number we compare. There is no reason to change it and I cant directly change string to int but I can with char. I could probably do this simpler but idk how
