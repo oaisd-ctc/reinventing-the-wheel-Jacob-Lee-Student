@@ -2,6 +2,14 @@ namespace MyUtilities
 {
     public static class StringUtils
     {
+
+        ///<summary>
+        ///Makes all letters sent uppercase
+        ///</summary>
+        ///<param name="s"> Any text.</pram>
+        ///<returns>
+        ///The same string in uppercase
+        ///</returns>
         public static string ToUpper(string s)
         {
             string text = ("");
@@ -29,6 +37,14 @@ namespace MyUtilities
             }
             return text;
         }
+
+        ///<summary>
+        ///Makes all letters sent lowercase
+        ///</summary>
+        ///<param name="s"> Any text.</pram>
+        ///<returns>
+        ///The same string in lowercase
+        ///</returns>
         public static string ToLower(string s)
         {
             string text = ("");
@@ -56,6 +72,14 @@ namespace MyUtilities
             }
             return text;
         }
+
+        ///<summary>
+        ///Counts the number of letters sent
+        ///</summary>
+        ///<param name="s"> Any text.</pram>
+        ///<returns>
+        ///The number of letters in the word
+        ///</returns>
         public static int Length(string s)
         {
             //idk what to say it just counts the letters
@@ -66,6 +90,14 @@ namespace MyUtilities
             }
             return i;
         }
+
+        ///<summary>
+        ///Reverses the string
+        ///</summary>
+        ///<param name="s"> Any text.</pram>
+        ///<returns>
+        ///The same string backwards
+        ///</returns>
         public static string Reverse(string s)
         {
             //I don't understand how I did this but it works
@@ -79,10 +111,18 @@ namespace MyUtilities
             }
             return reversed;
         }
+
+        ///<summary>
+        ///Counts the number of vowels sent
+        ///</summary>
+        ///<param name="s"> Any text.</pram>
+        ///<returns>
+        ///The number of vowels in the word
+        ///</returns>
         public static int CountVowels(string s)
         {
             //uses upppercase so I don't have to check 10 numbers
-            s=StringUtils.ToUpper(s);
+            s = StringUtils.ToUpper(s);
             int i = 0;
             foreach (char c in s)
             {
@@ -97,11 +137,19 @@ namespace MyUtilities
             }
             return i;
         }
+
+        ///<summary>
+        ///Counts the number of consonants sent
+        ///</summary>
+        ///<param name="s"> Any text.</pram>
+        ///<returns>
+        ///The number of consonants in the word
+        ///</returns>
         public static int CountConsonants(string s)
         {
             //uses upppercase so I don't have to check 10 numbers
-            s=StringUtils.ToUpper(s);
-            int i=StringUtils.Length(s);
+            s = StringUtils.ToUpper(s);
+            int i = StringUtils.Length(s);
             foreach (char c in s)
             {
                 //upper case comes in letters so I change it back into numbers
@@ -115,11 +163,20 @@ namespace MyUtilities
             }
             return i;
         }
+
+        ///<summary>
+        ///Tells you if the letter is in the string you sent first
+        ///</summary>
+        ///<param name="s"> Any text.</pram>
+        ///<param name="a"> A character.</pram>
+        ///<returns>
+        ///True, if the letter is in the word, otherwise False
+        ///</returns>
         public static bool HasLetter(string s, string a)
         {
             int d = 0;
             int e = 0;
-            s=StringUtils.ToUpper(s);
+            s = StringUtils.ToUpper(s);
             //set it to false because it might not have the letter
             bool answer = false;
             //This is always the number we compare. There is no reason to change it and I cant directly change string to int but I can with char. I could probably do this simpler but idk how
@@ -145,11 +202,20 @@ namespace MyUtilities
             }
             return answer;
         }
+
+        ///<summary>
+        ///Tells you if the letter is the last one in the string you sent first
+        ///</summary>
+        ///<param name="s"> Any text.</pram>
+        ///<param name="a"> A character.</pram>
+        ///<returns>
+        ///True, if the letter is the last letterr in the word, otherwise False
+        ///</returns>
         public static bool LastLetterIs(string s, string a)
         {
             int d = 0;
             int e = 0;
-            s=StringUtils.ToUpper(s);
+            s = StringUtils.ToUpper(s);
             //set it to false because it might not have the letter
             bool answer = false;
             //This is always the number we compare. There is no reason to change it and I cant directly change string to int but I can with char. I could probably do this simpler but idk how
@@ -177,6 +243,14 @@ namespace MyUtilities
             }
             return answer;
         }
+
+        ///<summary>
+        ///Counts the number of lowercase letters sent
+        ///</summary>
+        ///<param name="s"> Any text.</pram>
+        ///<returns>
+        ///The number of lowercase letters in the word
+        ///</returns>
         public static int CountLower(string s)
         {
             int count = 0;
@@ -191,6 +265,14 @@ namespace MyUtilities
             }
             return count;
         }
+        
+        ///<summary>
+        ///Counts the number of uppercase letters sent
+        ///</summary>
+        ///<param name="s"> Any text.</pram>
+        ///<returns>
+        ///The number of uppercase letters in the word
+        ///</returns>
         public static int CountUpper(string s)
         {
             int count = 0;
@@ -205,6 +287,14 @@ namespace MyUtilities
             }
             return count;
         }
+        
+        ///<summary>
+        ///Tells you if all the letters are uppercase in the string you sent
+        ///</summary>
+        ///<param name="s"> Any text.</pram>
+        ///<returns>
+        ///True, if all the letters are uppercase, otherwise False
+        ///</returns>
         public static bool IsAllUpper(string s)
         {
             bool answer = false;
