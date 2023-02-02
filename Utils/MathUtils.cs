@@ -87,7 +87,7 @@ namespace MyUtilities {
         }
 
         /// <summary>
-        /// Finds the smaller number between a and b
+        /// Finds the lesser number between a and b
         /// </summary>
         /// <param name="a"> The first number
         /// <param name="b"> The second number
@@ -339,7 +339,7 @@ namespace MyUtilities {
             return x;
         }
         /// <summary>
-        /// Rounds to the closest whole number via banker's sort
+        /// Rounds to the closest whole number via banker's round
         /// </summary>
         /// <param name="a"> The base number
         /// <returns>

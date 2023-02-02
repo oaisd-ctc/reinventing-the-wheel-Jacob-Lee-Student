@@ -1,7 +1,7 @@
 using Xunit;
 namespace MyUtilities;
 
-public class Tests {
+public class MathTests {
     [Fact]
     public void AddTest() { 
         int aTest = 2;
