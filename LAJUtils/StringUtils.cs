@@ -177,6 +177,7 @@ namespace MyUtilities
             int d = 0;
             int e = 0;
             s = StringUtils.ToUpper(s);
+            a = StringUtils.ToUpper(a);
             //set it to false because it might not have the letter
             bool answer = false;
             //This is always the number we compare. There is no reason to change it and I cant directly change string to int but I can with char. I could probably do this simpler but idk how
@@ -184,11 +185,6 @@ namespace MyUtilities
             {
                 //make it numbers
                 e = (int)(b);
-                if (e >= 97 && e <= 122)
-                {
-                    //make it uppercase
-                    e = e - 32;
-                }
             }
             foreach (char c in s)
             {
@@ -216,6 +212,7 @@ namespace MyUtilities
             int d = 0;
             int e = 0;
             s = StringUtils.ToUpper(s);
+            a = StringUtils.ToUpper(a);
             //set it to false because it might not have the letter
             bool answer = false;
             //This is always the number we compare. There is no reason to change it and I cant directly change string to int but I can with char. I could probably do this simpler but idk how
@@ -223,10 +220,6 @@ namespace MyUtilities
             {
                 //make it numbers
                 e = (int)(b);
-                if (e >= 97 && e <= 122)
-                {
-                    e = e - 32;
-                }
             }
             foreach (char c in s)
             {
